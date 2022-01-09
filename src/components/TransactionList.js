@@ -10,7 +10,6 @@ export const TransactionList = () => {
         {transaction.length > 0 ? transaction.map((item, i) => {
           return <Transaction key={i} item={item} />
         }) : 'Ooops!'}
-
       </ul>
     </>
   )
