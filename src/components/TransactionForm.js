@@ -11,10 +11,12 @@ export const TransactionForm = () => {
       id: uuidv4(),
       text, amount: +amount
     }
-    if (text.trim()) {
+    if (text.trim() && amount !== 0) {
       addTransaction(newObj)
       setText('')
       setAmount(0)
+    } else {
+      alert("Please fill in the blank lines...")
     }
   }
   return (
